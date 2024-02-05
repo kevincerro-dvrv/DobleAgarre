@@ -19,11 +19,15 @@ public class GameManager : MonoBehaviour {
     }
 
     public InputAction deployTargets;
+    public InputAction releaseMagazine;
+
     // Start is called before the first frame update
     void Start() {
         DeployTargets(); 
         deployTargets.Enable();
         deployTargets.performed += DT;
+
+        releaseMagazine.Enable(); 
     }
 
     // Update is called once per frame
